@@ -62,7 +62,7 @@ public class AllStoryAdapter extends RecyclerView.Adapter<AllStoryAdapter.AllSto
             @Override
             public void onClick(View v) {
                 AllStoryDirections.ActionAllStoryToReadStory directions = AllStoryDirections.actionAllStoryToReadStory();
-                directions.setStoryUuid(allstories.get(position).uuid);
+                directions.setStoryUuid(allstories.get(position).firebase_uuid);
                 Navigation.findNavController(v).navigate(directions);
             }
         });

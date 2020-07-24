@@ -62,12 +62,8 @@ public class MyStoriesAdapter extends RecyclerView.Adapter<MyStoriesAdapter.MySt
             @Override
             public void onClick(View v) {
                  MyStoriesDirections.ActionMyStoriesToUpdateDeleteMyStory directions=MyStoriesDirections.actionMyStoriesToUpdateDeleteMyStory();
-                 directions.setMyStoryUuid(allstories.get(position).uuid);
+                 directions.setMyStoryUuid(allstories.get(position).firebase_uuid);
                  Navigation.findNavController(v).navigate(directions);
-                Log.i("info123","ok");
-//                AllStoryDirections.ActionAllStoryToReadStory directions = AllStoryDirections.actionAllStoryToReadStory();
-//                directions.setStoryUuid(allstories.get(position).uuid);
-//                Navigation.findNavController(v).navigate(directions);
             }
         });
     }

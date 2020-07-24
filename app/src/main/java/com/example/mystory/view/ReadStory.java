@@ -24,7 +24,7 @@ import com.example.mystory.model.StoryModel;
 public class ReadStory extends Fragment {
 
     View view;
-    long story_uuid;
+    String story_uuid;
     public ReadStory() {
         // Required empty public constructor
     }
@@ -64,11 +64,7 @@ public class ReadStory extends Fragment {
         @Override
         protected void onPostExecute(StoryModel storyModel) {
             super.onPostExecute(storyModel);
-            Log.i("info123",storyModel.author);
-            Log.i("info123",storyModel.title);
-            Log.i("info123",String.valueOf(storyModel.uuid));
-            Log.i("info123",storyModel.text);
-
+            //we will then inflate the views
         }
     }
 

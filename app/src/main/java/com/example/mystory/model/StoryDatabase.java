@@ -17,7 +17,6 @@ public abstract class StoryDatabase extends RoomDatabase {
                     context.getApplicationContext(),StoryDatabase.class,"story_database"
             ).build();
         }
-
         return instance;
     }
 

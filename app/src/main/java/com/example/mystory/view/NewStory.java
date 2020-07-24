@@ -2,6 +2,7 @@ package com.example.mystory.view;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
 import android.os.Bundle;
 
@@ -42,7 +43,7 @@ public class NewStory extends Fragment {
     Button choose_button;
     Button submit_button;
     View view;
-    Bitmap b;
+    Bitmap bitmap_image;
     String uuid;
     public NewStory() {
         // Required empty public constructor
@@ -55,7 +56,7 @@ public class NewStory extends Fragment {
         imageView=view.findViewById(R.id.add_story_image_view);
         choose_button=view.findViewById(R.id.add_story_choose_button);
         submit_button=view.findViewById(R.id.add_story_submit_button);
-
+        bitmap_image=((BitmapDrawable)imageView.getDrawable()).getBitmap();
 
         choose_button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -97,7 +98,7 @@ public class NewStory extends Fragment {
             Uri image_data=data.getData();
             try{
                 Bitmap bitmap=MediaStore.Images.Media.getBitmap(this.getContext().getContentResolver(),image_data);
-                b=bitmap;
+                bitmap_image =bitmap;
                 imageView.setImageBitmap(bitmap);
 
 //                Bitmap x=((BitmapDrawable)imageView.getDrawable()).getBitmap();
@@ -116,7 +117,7 @@ public class NewStory extends Fragment {
         //then we refresh the view model
 //        Bitmap bitmap=((BitmapDrawable)imageView.getDrawable()).getBitmap();
         uuid = UUID.randomUUID().toString();
-        Bitmap bitmap=b;
+        Bitmap bitmap= bitmap_image;
         ByteArrayOutputStream baos=new ByteArrayOutputStream();
         bitmap.compress(Bitmap.CompressFormat.JPEG,100,baos);
         byte[] image_out=baos.toByteArray();

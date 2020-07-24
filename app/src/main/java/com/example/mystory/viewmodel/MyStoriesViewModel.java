@@ -54,7 +54,7 @@ public class MyStoriesViewModel extends AndroidViewModel {
                     String author_name=postSnapshot.child("author_name").getValue().toString();
                     String story_title=postSnapshot.child("story_title").getValue().toString();
                     String story_text=postSnapshot.child("story_text").getValue().toString();
-                    stories.add(new StoryModel(image_url,author_name,story_title,story_text));
+                    stories.add(new StoryModel(image_url,author_name,story_title,story_text,snapshot.getKey()));
                 }
 
                 Toast.makeText(getApplication(), "Data fetched from Firebase", Toast.LENGTH_SHORT).show();

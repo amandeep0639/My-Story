@@ -122,7 +122,7 @@ public class MyStories extends Fragment {
 
         @Override
         protected List<StoryModel> doInBackground(Void... voids) {
-            return StoryDatabase.getInstance(getContext()).storyDao().getAllStories();
+            return StoryDatabase.getInstance(getContext()).storyDao().getMyStories(mAuth.getCurrentUser().getEmail());
         }
 
         @Override

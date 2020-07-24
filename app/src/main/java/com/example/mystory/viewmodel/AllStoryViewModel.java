@@ -60,7 +60,9 @@ public class AllStoryViewModel extends AndroidViewModel {
                     String author_name=postSnapshot.child("author_name").getValue().toString();
                     String story_title=postSnapshot.child("story_title").getValue().toString();
                     String story_text=postSnapshot.child("story_text").getValue().toString();
-                    stories.add(new StoryModel(image_url,author_name,story_title,story_text));
+                    String story_firebase_uuid=postSnapshot.getKey();
+                    Log.i("info123456",story_firebase_uuid);
+                    stories.add(new StoryModel(image_url,author_name,story_title,story_text,story_firebase_uuid));
                 }
 
                 Toast.makeText(getApplication(), "Data fetched from Firebase", Toast.LENGTH_SHORT).show();

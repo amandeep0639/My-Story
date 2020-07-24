@@ -14,13 +14,16 @@ public class StoryModel {
     public String title;
     @ColumnInfo(name = "story_text")
     public String text;
+    @ColumnInfo(name = "firebase_uuid")
+    public String firebase_uuid;
     @PrimaryKey(autoGenerate = true)
     public long  uuid;
 
-    public StoryModel(String imageUrl, String author, String title, String text) {
+    public StoryModel(String imageUrl, String author, String title, String text,String firebase_uuid) {
         this.imageUrl = imageUrl;
         this.author = author;
         this.title = title;
         this.text = text;
+        this.firebase_uuid=firebase_uuid;
     }
 }

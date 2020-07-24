@@ -63,8 +63,8 @@
         tools:layout="@layout/fragment_read_story" >
         <argument
             android:name="story_uuid"
-            app:argType="long"
-            android:defaultValue="0L" />
+            app:argType="string"
+            android:defaultValue='""' />
     </fragment>
     <fragment
         android:id="@+id/newStory"
@@ -100,7 +100,10 @@
         tools:layout="@layout/fragment_update_delete_my_story" >
         <argument
             android:name="my_story_uuid"
-            app:argType="long"
-            android:defaultValue="0L" />
+            app:argType="string"
+            android:defaultValue='""' />
+        <action
+            android:id="@+id/action_update_delete_my_story_to_myStories"
+            app:destination="@id/myStories" />
     </fragment>
 </navigation>

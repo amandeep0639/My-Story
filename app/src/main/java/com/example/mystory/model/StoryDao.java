@@ -14,11 +14,11 @@ public interface StoryDao {
     @Query("Select * from stories ")
     List<StoryModel> getAllStories();
 
-    @Query("select * from stories where uuid=:story_id")
-    StoryModel getStory(long story_id);
+    @Query("select * from stories where firebase_uuid=:story_id")
+    StoryModel getStory(String story_id);
 
     @Query("select * from stories where author_name=:author_email")
-    StoryModel getMyStories(String author_email);
+    List<StoryModel> getMyStories(String author_email);
 
     @Query("delete from stories")
     void deleteAll();
