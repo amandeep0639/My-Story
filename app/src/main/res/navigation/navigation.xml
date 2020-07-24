@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/welcomeScreen">
+
+    <fragment
+        android:id="@+id/welcomeScreen"
+        android:name="com.example.mystory.view.WelcomeScreen"
+        android:label="fragment_welcome_screen"
+        tools:layout="@layout/fragment_welcome_screen" >
+        <action
+            android:id="@+id/action_welcomeScreen_to_loginScreen"
+            app:destination="@id/loginScreen" />
+        <action
+            android:id="@+id/action_welcomeScreen_to_allStory"
+            app:destination="@id/allStory" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginScreen"
+        android:name="com.example.mystory.view.loginScreen"
+        android:label="fragment_login_screen"
+        tools:layout="@layout/fragment_login_screen" >
+        <action
+            android:id="@+id/action_loginScreen_to_signUpScreen"
+            app:destination="@id/signUpScreen" />
+        <action
+            android:id="@+id/action_loginScreen_to_allStory"
+            app:destination="@id/allStory" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpScreen"
+        android:name="com.example.mystory.view.SignUpScreen"
+        android:label="fragment_sign_up_screen"
+        tools:layout="@layout/fragment_sign_up_screen" >
+        <action
+            android:id="@+id/action_signUpScreen_to_allStory"
+            app:destination="@id/allStory" />
+    </fragment>
+    <fragment
+        android:id="@+id/allStory"
+        android:name="com.example.mystory.view.AllStory"
+        android:label="fragment_all_story"
+        tools:layout="@layout/fragment_all_story" >
+        <action
+            android:id="@+id/action_allStory_to_readStory"
+            app:destination="@id/readStory" />
+        <action
+            android:id="@+id/action_allStory_to_newStory"
+            app:destination="@id/newStory" />
+        <action
+            android:id="@+id/action_allStory_to_myDetails"
+            app:destination="@id/myDetails" />
+        <action
+            android:id="@+id/action_allStory_to_loginScreen"
+            app:destination="@id/loginScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/readStory"
+        android:name="com.example.mystory.view.ReadStory"
+        android:label="fragment_read_story"
+        tools:layout="@layout/fragment_read_story" >
+        <argument
+            android:name="story_uuid"
+            app:argType="long"
+            android:defaultValue="0L" />
+    </fragment>
+    <fragment
+        android:id="@+id/newStory"
+        android:name="com.example.mystory.view.NewStory"
+        android:label="fragment_new_story"
+        tools:layout="@layout/fragment_new_story" >
+        <action
+            android:id="@+id/action_newStory_to_allStory"
+            app:destination="@id/allStory" />
+    </fragment>
+    <fragment
+        android:id="@+id/myStories"
+        android:name="com.example.mystory.view.MyStories"
+        android:label="fragment_my_stories"
+        tools:layout="@layout/fragment_my_stories" >
+        <action
+            android:id="@+id/action_myStories_to_update_delete_my_story"
+            app:destination="@id/update_delete_my_story" />
+    </fragment>
+    <fragment
+        android:id="@+id/myDetails"
+        android:name="com.example.mystory.view.myDetails"
+        android:label="fragment_my_details"
+        tools:layout="@layout/fragment_my_details" >
+        <action
+            android:id="@+id/action_myDetails_to_myStories"
+            app:destination="@id/myStories" />
+    </fragment>
+    <fragment
+        android:id="@+id/update_delete_my_story"
+        android:name="com.example.mystory.view.update_delete_my_story"
+        android:label="fragment_update_delete_my_story"
+        tools:layout="@layout/fragment_update_delete_my_story" >
+        <argument
+            android:name="my_story_uuid"
+            app:argType="long"
+            android:defaultValue="0L" />
+    </fragment>
+</navigation>

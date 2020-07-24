@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "465427808073",
+    "firebase_url": "https://mystory-c2215.firebaseio.com",
+    "project_id": "mystory-c2215",
+    "storage_bucket": "mystory-c2215.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:465427808073:android:7a7670e875b6612ff42498",
+        "android_client_info": {
+          "package_name": "com.example.mystory"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "465427808073-ib7trqt6m5nbklpkptdq8c4g04a9jfl1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCZJfH0jG9lP4-BZ-cEL-Ry8_lQHW2xoFI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "465427808073-ib7trqt6m5nbklpkptdq8c4g04a9jfl1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".view.NewStory">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:id="@+id/add_story_image_view"
+        android:src="@color/colorAccent" />
+
+    <Button
+        android:layout_marginTop="20dp"
+        android:layout_width="150dp"
+        android:text="Choose Image"
+        android:id="@+id/add_story_choose_button"
+        android:layout_height="50dp"/>
+    <Button
+        android:layout_marginTop="20dp"
+        android:layout_width="150dp"
+        android:text="Submit"
+        android:id="@+id/add_story_submit_button"
+        android:layout_height="50dp"/>
+
+
+</LinearLayout>
